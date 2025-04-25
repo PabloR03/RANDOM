@@ -165,4 +165,28 @@ Ejemplo2:
 
 ![alt text](image-6.png)
 
+## Arreglo Multidimensional
+### C3D
+```c
+x = y[i, j, k]
+x[i, j, k] = y
+```
+![alt text](image-7.png)
 
+![alt text](image-8.png)
+
+### Acceso y Asignación
+
+![alt text](image-9.png)
+
+
+#### Solucin implementada en una gramática
+
+![alt text](image-10.png)
+
+
+##### Teoria sobre tabla de simbolos y C3D
+
+![alt text](image-11.png)
+
+![alt text](image-12.png)
