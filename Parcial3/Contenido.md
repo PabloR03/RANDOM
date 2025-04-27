@@ -282,7 +282,7 @@ AUN FALTA LLAMADA A LA FUNCION UNO
 ```
 ![alt text](image-14.png)
 
-## Parametros de funciones
+## Parametros de funciones valor
 
 proc uno(x int, y int){  
     z int  
@@ -303,3 +303,99 @@ void uno(){
 
 
 ![alt text](image-15.png)
+
+## Parametros de funciones por referencia
+
+proc uno(x int, REF y int){  
+    z int  
+    z = x + y  
+}
+```c
+
+void uno (){
+    t1 = P + 2
+
+    t2 = P + 0 !Posicion de x
+    t3 = Stack[t2] ! x
+
+    t4 = P + 1 !Posicion de y
+    t5 = Stack[t4] ! y
+    t6 = Stack[t5] ! y por referencia
+
+    t7 = t3 + t6 ! x + y
+    Stack[t1] = t7 ! z = x + y
+}
+}  
+``` 
+
+![alt text](image-16.png)
+
+proc uno(x int, REF y int){  
+    z int  
+    z = x + y  
+    y = z
+}  
+
+void main(){
+    p, q int
+    p = 10
+    q = 20
+    call uno(p, q)
+}
+
+```c
+
+void uno (){
+    t1 = P + 2 !Posicion de z
+
+    t2 = P + 0 !Posicion de x
+    t3 = Stack[t2] ! x
+
+    t4 = P + 1 !Posicion de y
+    t5 = Stack[t4] ! y
+    t6 = Stack[t5] ! y por referencia
+
+    t7 = t3 + t6 ! x + y
+    Stack[t1] = t7 ! z = x + y
+
+    t8 = P + 1 !Posicion de y
+    t9 = Stack[t8] ! y
+    t10 P + 2 !Posicion de z
+    t11 = Stack[t10] ! z
+    Stack[t9] = t11 ! y = z
+}
+
+void main(){
+    t12 = P + 0 !Posicion de p
+    Stack[t12] = 10 ! p = 10
+    t13 = P + 1 !Posicion de q
+    Stack[t13] = 20 ! q = 20
+
+#Asignacion de valores en los nuevos ambitos
+
+    ! LLAMADA AL PROCEDIMIENTO
+    t14 = P + 0 !Posicion de p
+    t15 = Stack[t14] ! p
+    t16 = P + 2 !Cambio de ambito simulado
+    t17 = t16 + 0 !Posicion de x
+    Stack[t17] = t15 ! x = p
+
+    t18 = P + 1 !Posicion de q
+    t19 = P + 2 !Cambio de ambito simulado
+    t20 = t19 + 1 !Posicion de y
+    Stack[t20] = t18 ! y = REF(q)
+
+#Cambio de ambito real
+    t21 = P + 2 !Cambio de ambito Real
+    P = t21 !Cambio de ambito Real
+
+#Ejecutar el procedimiento
+    call uno(p, q) ! Llamada a la funcion uno
+
+#Regreso al ambito original
+    t22 = P - 2 !Regresamos al ambito anterior
+    P = t22 !Regresamos al ambito anterior
+}
+```
+![alt text](image-17.png)  
+
