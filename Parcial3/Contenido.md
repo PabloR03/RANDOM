@@ -191,3 +191,115 @@ x[i, j, k] = y
 
 ![alt text](image-12.png)
 
+# Entornos de Ejecucion
+
+proc uno(){
+    x int
+    y int
+    z int
+
+    x = 1
+    y = 2
+    z = x + y
+}
+
+call uno()
+
+```c
+void uno(){
+    t1 = P + 0 !Posicion de x
+    Stack[t1] = 1 ! x = 1
+    t2 = P + 1 !Posicion de y
+    Stack[t2] = 2 ! y = 2
+    t3 = P + 2 !Posicion de z
+
+    t4 = P + 0
+    t5 = Stack[t4] ! Valor de x
+    t6 = P + 1
+    t7 = Stack[t6] ! Valor de y
+    t8 = t5 + t7 ! x + y
+
+    Stack[t3] = t8 ! z = x + y
+}
+
+AUN FALTA LLAMADA A LA FUNCION UNO
+
+```
+![alt text](image-13.png)
+
+Ejemplo2:
+
+```c
+proc uno(){
+    x int
+    y int
+    z int
+    
+    x = 20 
+    y = -10
+
+    if x == 1 {
+        while y>=2 {
+            z = x + y
+        }
+    }
+}
+call uno()
+
+```c
+t1 = P + 0 !Posicion de x
+Stack[t1] = 20 ! x = 20
+t2 = P + 1 !Posicion de y
+Stack[t2] = -10 ! y = -10
+
+t3 = P + 0 !Posicion de x
+t4 = Stack[t3] ! x
+
+if t4 == 1 goto L1 ! Si x == 1, ir a L1
+goto L2 ! Si no, ir a L2
+L1:
+    L5:
+    t5 = P + 1 !Posicion de y
+    t6 = Stack[t5] ! y
+    if t6 >= 2 goto L3 ! Si y >= 2, ir a L3
+    goto L4: ! Si no, ir a L4
+    L3:
+        t7 = P + 2 !Posicion de z
+
+        t8 = P + 0 !Posicion de x
+        t9 = Stack[t8] ! x
+        t10 = P + 1 !Posicion de y
+        t11 = Stack[t10] ! y
+        t12 = t9 + t11 ! x + y
+        Stack[t7] = t12 ! z = x + y
+
+        goto L5 ! Ir a L5
+    L4:
+L2:
+}
+
+AUN FALTA LLAMADA A LA FUNCION UNO
+```
+![alt text](image-14.png)
+
+## Parametros de funciones
+
+proc uno(x int, y int){  
+    z int  
+    z = x + y  
+}  
+
+```c
+void uno(){
+    t1 = P + 2
+    t2 = P + 0 !Posicion de x
+    t3 = Stack[t2] ! x
+    t4 = P + 1 !Posicion de y
+    t5 = Stack[t4] ! y
+    t6 = t3 + t5 ! x + y
+    Stack[t1] = t6 ! z = x + y
+}  
+```
+
+
+![alt text](image-15.png)
