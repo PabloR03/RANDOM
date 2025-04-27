@@ -399,3 +399,76 @@ void main(){
 ```
 ![alt text](image-17.png)  
 
+## Funciones paso de parametros por valor y por referencia + RETURN
+
+int func uno(x int, REF y int){  
+    z int  
+    z = x + y  
+    return z
+}
+
+proc main(){  
+    p, q int  
+    p = 10  
+    q = 20  
+    z = uno(p, q)  
+}  
+
+```c
+
+void uno (){
+    t1 = P + 2 !Posicion de z
+
+    t2 = P + 0 !Posicion de x
+    t3 = Stack[t2] ! x
+
+    t4 = P + 1 !Posicion de y
+    t5 = Stack[t4] ! y
+
+    t6 = t3 + t5 ! x + y
+    Stack[t1] = t6 ! z = x + y
+
+    t7 = P + 3 !Posicion de return
+    t8 = P + 2 !Posicion de z
+
+    t9 = Stack[t8] ! z
+    Stack[t7] = t9 ! return = z
+}  
+```
+
+```c
+void main(){
+    t10 = P + 0
+    Stack[t10] = 10 ! p = 10
+    t11 = P + 1
+    Stack[t11] = 20 ! q = 20
+    t12 = P + 1 !Posicion de q
+
+    # LLamar a la funcion uno
+    t13 = P + 0 !Posicion de p
+    t14 = Stack[t13] ! p
+    t15 = P + 2 !Cambio de ambito simulado
+    t16 = t15 + 0 !Posicion de x
+    Stack[t16] = t14 ! x = p
+
+    t17 = P + 1 !Posicion de q
+    t18 = Stack[t17] ! q
+    t19 = P + 2 !Cambio de ambito simulado
+    t20 = t19 + 1 !Posicion de y
+    Stack[t20] = t18 ! y = (q)
+
+    P = P + 2 !Cambio de ambito Real
+    call uno() ! Llamada a la funcion uno
+    t21 = P + 3 !Posicion de return
+    t22 = Stack[t21] ! return
+    t23 = P - 2 !Regresamos al ambito anterior
+
+    Stack[t12] = t23 ! z = return
+}
+
+```
+
+![alt text](image-18.png)
+
+
+
