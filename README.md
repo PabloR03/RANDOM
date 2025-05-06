@@ -93,3 +93,183 @@ Finalmente, tenemos el proyecto Aerómetro, un innovador sistema de transporte p
 Los sistemas de transporte autónomo representan el futuro de la movilidad urbana. Las tecnologías presentadas están transformando nuestra manera de desplazarnos hacia opciones más eficientes, seguras y sostenibles.
 
 Gracias por su atención. ¿Tienen alguna pregunta?
+
+
+
+
+
+
+
+
+
+# Guion Practicas Intermedias
+# GUION DE EXPOSICIÓN: LA NUBE Y SUS APLICACIONES
+**Por Pablo Andrés Rodríguez Lima**
+
+## INTRODUCCIÓN (2 minutos)
+- **Saludo inicial:** Buenos días/tardes a todos. Hoy les hablaré sobre la computación en la nube, una tecnología que ha revolucionado la forma en que interactuamos con la información.
+- **Definición general:** La computación en la nube es un modelo que permite el acceso bajo demanda a recursos informáticos compartidos (como servidores, almacenamiento, aplicaciones) a través de internet, sin necesidad de una gestión directa por parte del usuario.
+- **Importancia actual:** Actualmente, el 94% de las empresas utilizan algún servicio en la nube y se proyecta que el mercado alcanzará los $1.3 billones para 2025.
+- **Estructura de la presentación:** Exploraremos los tipos de nubes, principales servicios, aplicaciones populares, consideraciones de seguridad y las tendencias en orquestación.
+
+## TIPOS DE NUBES (5 minutos)
+
+### Nube Pública
+- **Definición:** Infraestructura propiedad de proveedores terceros que ofrecen servicios a múltiples clientes a través de internet.
+- **Características principales:**
+  * Administrada por proveedores externos
+  * Modelo de pago por uso
+  * Escalabilidad inmediata
+  * Menor costo inicial
+- **Proveedores principales:** Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform
+- **Ejemplos concretos:** 
+  * Gmail: almacena más de 15GB de correos por usuario sin necesidad de servidores locales
+  * Google Drive: más de 1 billón de archivos almacenados globalmente
+  * Netflix: transmite contenido a más de 200 millones de usuarios utilizando AWS
+
+### Nube Privada
+- **Definición:** Infraestructura dedicada exclusivamente a una organización, ya sea gestionada internamente o por terceros.
+- **Características principales:**
+  * Mayor control y personalización
+  * Seguridad mejorada para datos sensibles
+  * Cumplimiento de normativas específicas
+  * Mayor inversión inicial
+- **Casos de uso típicos:**
+  * Instituciones financieras: JP Morgan Chase invirtió $500 millones en su infraestructura de nube privada
+  * Sector salud: hospitales que almacenan registros médicos confidenciales
+  * Gobiernos: la Administración Federal de EE.UU. utiliza nubes privadas para información clasificada
+
+### Nube Híbrida
+- **Definición:** Combinación de infraestructuras públicas y privadas que operan de forma integrada.
+- **Características principales:**
+  * Flexibilidad para distribuir cargas de trabajo
+  * Balance entre seguridad y costos
+  * Facilita la transición gradual a la nube
+- **Ejemplo práctico:** Una cadena minorista que:
+  * Mantiene datos de tarjetas de crédito en su nube privada
+  * Utiliza nube pública para su tienda online durante temporadas de alto tráfico (Black Friday)
+  * Según Gartner, el 90% de las organizaciones utilizarán modelos híbridos para 2025
+
+## SERVICIOS EN LA NUBE (4 minutos)
+
+### Modelos de Servicio
+1. **SaaS (Software as a Service)**
+   - Software completo accesible vía web sin instalación local
+   - Ejemplos: Google Workspace, Microsoft 365, Salesforce
+   - Mercado valorado en $145.5 mil millones en 2021
+
+2. **PaaS (Platform as a Service)**
+   - Plataformas para desarrollar, ejecutar y gestionar aplicaciones
+   - Ejemplos:
+     * Google App Engine: permite desplegar aplicaciones web sin gestionar servidores
+     * Heroku: usado por más de 8 millones de desarrolladores 
+     * Microsoft Azure App Service: integra múltiples lenguajes de programación
+
+3. **IaaS (Infrastructure as a Service)**
+   - Recursos informáticos fundamentales (servidores, almacenamiento)
+   - Ejemplos:
+     * Amazon EC2: permite escalar desde 1 hasta miles de servidores virtuales en minutos
+     * Google Compute Engine: ofrece más de 20 tipos de máquinas virtuales para diferentes necesidades
+     * Microsoft Azure Virtual Machines: presencia en más de 60 regiones globales
+
+## APLICACIONES POPULARES EN LA NUBE (5 minutos)
+
+### Productividad y Colaboración
+- **Google Workspace:**
+  * Edición colaborativa en tiempo real con hasta 100 usuarios simultáneos
+  * Almacenamiento compartido y acceso multiplataforma
+  * Más de 6 millones de empresas lo utilizan globalmente
+
+- **Microsoft 365:**
+  * Integración completa entre Office, Teams y OneDrive
+  * Colaboración en tiempo real en documentos de Office
+  * Más de 250 millones de usuarios activos mensuales
+
+### Almacenamiento y Sincronización
+- **Dropbox:**
+  * Sincronización automática entre dispositivos
+  * Historial de versiones y recuperación de archivos
+  * Más de 700 millones de usuarios registrados
+
+- **OneDrive:**
+  * Integración nativa con Windows y Office
+  * Características de seguridad avanzadas
+  * Almacena más de 38 petabytes de datos corporativos
+
+### Gestión de Información
+- **Evernote:**
+  * Organización de notas multimedia
+  * Sincronización entre dispositivos y búsqueda avanzada
+  * Reconocimiento de texto en imágenes (OCR)
+
+### Entretenimiento
+- **Servicios de streaming musical:**
+  * Grooveshark (histórico)
+  * Spotify: más de 100 millones de canciones disponibles instantáneamente
+  * Apple Music: biblioteca de más de 90 millones de canciones en la nube
+
+## SEGURIDAD Y REGULACIONES (3 minutos)
+
+### Desafíos de Seguridad
+- **Principales preocupaciones:**
+  * Privacidad de datos (el 66% de las empresas lo consideran su mayor preocupación)
+  * Vulnerabilidades en la infraestructura compartida
+  * Control de acceso y autenticación
+  * Cumplimiento normativo
+
+### Medidas de Protección
+- **Estrategias efectivas:**
+  * Cifrado de datos en reposo y en tránsito
+  * Autenticación multifactor (reduce los riesgos en un 99.9%)
+  * Auditorías regulares y monitoreo continuo
+  * Segmentación de datos sensibles
+
+### Marco Regulatorio
+- **Principales regulaciones:**
+  * GDPR en Europa: multas de hasta €20 millones o 4% de ingresos globales
+  * HIPAA en EE.UU. para datos médicos
+  * Regulaciones específicas por industria y región
+  * ISO 27001/27017/27018 para seguridad en la nube
+
+## ORQUESTACIÓN EN LA NUBE (3 minutos)
+
+### Conceptos Fundamentales
+- **Definición:** Automatización y coordinación de servicios, aplicaciones e infraestructura en la nube
+- **Beneficios:**
+  * Reducción de tareas manuales (ahorro de hasta 70% en tiempo de administración)
+  * Despliegue consistente y repetible
+  * Escalabilidad automática según demanda
+  * Recuperación rápida ante fallos
+
+### Herramientas Principales
+- **Kubernetes:**
+  * Sistema de orquestación de contenedores de código abierto
+  * Adoptado por el 78% de organizaciones que utilizan contenedores
+  * Automatiza despliegue, escalado y operaciones
+
+- **Terraform:**
+  * Infraestructura como código (IaC)
+  * Compatible con más de 100 proveedores de servicios
+  * Permite gestionar recursos heterogéneos de manera declarativa
+
+- **AWS CloudFormation:**
+  * Plantillas para aprovisionar recursos en AWS
+  * Más de 500 tipos de recursos soportados
+  * Despliegue completo de infraestructura en minutos
+
+## CONCLUSIONES (2 minutos)
+- **Impacto actual:** La nube ha transformado:
+  * Cómo las empresas operan (reducción de costos operativos del 30-50%)
+  * Cómo los equipos colaboran (aumento de productividad del 20-30%)
+  * Cómo innovamos (aceleración del tiempo de lanzamiento en un 60%)
+
+- **Tendencias futuras:**
+  * Computación edge (procesamiento en el borde de la red)
+  * Nubes soberanas por país
+  * Inteligencia artificial integrada en servicios cloud
+  * Adopción masiva de modelos serverless
+
+- **Mensaje final:** La nube no es solo una tecnología, sino un cambio de paradigma que seguirá evolucionando y modelando el futuro digital.
+
+## PREGUNTAS Y RESPUESTAS (5 minutos)
+- Agradecer la atención y abrir espacio para preguntas.
