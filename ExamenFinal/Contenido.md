@@ -180,8 +180,62 @@ Traduccion dirigida por la sintaxis
         ![alt text](image-6.png)
         ![alt text](image-8.png)
 
+# Optimizacion
+![alt text](image-9.png)
+
+![alt text](image-10.png)
+
+![alt text](image-11.png)
+
+## Optimizacion Por Bloques
+- Bloque Basico: Secuencia de instrucciones que no contiene saltos ni etiquetas.
+
+![alt text](image-14.png)  
+
+Algoritmo:
+- Determinar lideres de bloques
+    - La primera proposicion es un lider
+    - Cualquier proposicion que sea el destino de un salto goto condicional o incondicional es un lider
+    - Cualquier proposicion que vaya inmediatamente despues de un salto goto incondicional es un lider
+
+- Bloque basico consta del lider y todas las proposiciones hasta el proximo lider sin incluirlo o el fin del programa.
+
+![alt text](image-15.png)
+![alt text](image-13.png)
 
 
+### Eliminacion de subexpresiones comunes
+Se considera una subexpresion comun (E), si esta ha sido calculada previamente y los valores de las variables no han cambiado desde el calculo anterior.
+
+![alt text](image-12.png)
+
+## Propagacion de copias 
+- Asignaciones de la forma x = y (Proposiciones copia)
+
+- El algoritmo de eliminacion de subexpresiones comunes las introduce 
+
+- La idea es utilizar y por x, siempre y cuando sea posible despues de la proposicion de copia x = y.
+
+- A menudo convierte porposiciones de copia en codigo inactivo.
+
+![alt text](image-16.png)
 
 
+## Eliminacion de codigo inactivo
 
+- Una variable esta activa en un punto si su valor puede ser utilizado posteriormente, en caso contrario esta incativa en ese punto.
+
+- Proposiciones que nunca llegan a utilizarse.
+
+- Puede aparecer como resultado de transformaciones de anteriores.
+
+
+![alt text](image-17.png)
+
+![alt text](image-18.png)
+
+![alt text](image-19.png)
+
+![alt text](image-20.png)
+
+![alt text](image-21.png)
