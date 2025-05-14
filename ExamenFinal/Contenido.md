@@ -239,3 +239,41 @@ Se considera una subexpresion comun (E), si esta ha sido calculada previamente y
 ![alt text](image-20.png)
 
 ![alt text](image-21.png)
+
+
+# ALGORITMO EXAMEN FINAL 
+
+Void MultiplicarMatrices()
+    // Definir arrays enteros con rangos específicos
+    Definir A[1..3][2..4], B[2..4][8..10], C[1..3][8..10]
+    Definir enteros: i, j, k
+    
+    // Multiplicar matrices
+    i ← 1
+    mientras i ≤ 3 hacer
+        j ← 8
+        mientras j ≤ 10 hacer
+            k ← 2
+            mientras k ≤ 4 hacer
+                C[i][j] ← C[i][j] + A[i][k] * B[k][j]
+                k ← k + 1
+            fin mientras
+            j ← j + 1
+        fin mientras
+        i ← i + 1
+    fin mientras
+    
+    // Imprimir resultado
+    // Nota: Los índices originales M y P no estaban definidos,
+    // así que usaré los límites específicos de C
+    i ← 1
+    mientras i ≤ 3 hacer
+        j ← 8
+        mientras j ≤ 10 hacer
+            Escribir C[i][j]
+            j ← j + 1
+        fin mientras
+        i ← i + 1
+    fin mientras
+
+    
