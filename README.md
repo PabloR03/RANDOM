@@ -1,2 +1,2 @@
-# RANDOM
-HOLA YA VOY A ELIMINAR ESTO XD, SOLO GANO COMPI Y YA 
+# Recurso Magistral OLC2
+Material de estudio Compi2
